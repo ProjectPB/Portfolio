@@ -10,6 +10,8 @@ export const NavbarContainer = styled.ul`
   top: 50px;
   width: 100%;
   margin-left: -15px;
+  background-color: white;
+  border-bottom: 1px solid gold;
 `;
 
 export const ListItem = styled.li`
@@ -17,6 +19,10 @@ export const ListItem = styled.li`
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  padding: 20px 0 20px 15px;
   width: 100%;
+  padding: 20px 17.5px;
+
+  &:hover {
+    background-color: gold;
+  }
 `;

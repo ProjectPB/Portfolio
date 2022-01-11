@@ -7,13 +7,13 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   padding: 5px 15%;
   height: 50px;
-  top: 20px;
   position: relative;
+  margin-top: 20px;
 
   @media (max-width: 992px) {
     padding: 5px 15px;
     position: static;
-    top: 0;
+    margin: 0;
   }
 `;
 
