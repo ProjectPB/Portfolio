@@ -10,14 +10,12 @@ import htmlcssjs_logo from "./../../assets/skills/htmlcssjs.png";
 import mui_logo from "./../../assets/skills/mui.png";
 import {
   SkillsContainer,
-  TextLarge,
-  TextWrapper,
-  TextMedium,
   SkillsWrapper,
   SkillIcon,
   SkillName,
   Skill,
 } from "./Styles";
+import Title from "../Title";
 
 const skills = [
   { icon: htmlcssjs_logo, name: "HTML/CSS/JS" },
@@ -35,19 +33,17 @@ const skills = [
 ];
 
 const Skills = () => {
+  const titleConfig = {
+    upperText: "Skills",
+    lowerText_1:
+      "I create websites with emphasis on responsiveness, quick loading time and clean code",
+    lowerText_2:
+      "The following languages and technologies help me with achieving goals:",
+  };
+
   return (
     <SkillsContainer>
-      <TextWrapper>
-        <TextLarge>Skills</TextLarge>
-
-        <TextMedium>
-          I create websites with emphasis on responsiveness, quick loading time
-          and clean code
-        </TextMedium>
-        <TextMedium>
-          The following languages and technologies help me with achieving goals:
-        </TextMedium>
-      </TextWrapper>
+      <Title {...titleConfig} />
 
       <SkillsWrapper>
         {skills.map(({ icon, name }, id) => (
