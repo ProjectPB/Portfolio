@@ -1,23 +1,13 @@
 import React from "react";
 import Title from "../Title";
-import fscImg from "./../../assets/projects/sharefood_max.jpg";
-import mobileImg from "./../../assets/projects/sharefood_min.jpg";
-import {
-  FullscreenImage,
-  GitHubIcon,
-  IconLinksWrapper,
-  LeftContainer,
-  Link,
-  MobileImage,
-  OpenIcon,
-  ProjectsContainer,
-  ProjectsWrapper,
-  RightContainer,
-  TextContainer,
-  TextLarge,
-  TextMedium,
-  TextSmall,
-} from "./Styles";
+import sharefoodFscImg from "./../../assets/projects/sharefood_max.jpg";
+import sharefoodMobileImg from "./../../assets/projects/sharefood_min.jpg";
+import wearshopFscImg from "./../../assets/projects/wearshop_max.jpg";
+import wearshopMobileImg from "./../../assets/projects/wearshop_min.jpg";
+import concertonFscImg from "./../../assets/projects/concerton_max.jpg";
+import concertonMobileImg from "./../../assets/projects/concerton_min.jpg";
+import Project from "../Project";
+import { ProjectsContainer, ProjectsWrapper } from "./Styles";
 
 const Projects = () => {
   const titleConfig = {
@@ -25,33 +15,46 @@ const Projects = () => {
     lowerText_1: "Check out my projects",
   };
 
+  const sharefoodConfig = {
+    fscImg: sharefoodFscImg,
+    mobileImg: sharefoodMobileImg,
+    title: "Sharefood",
+    upperText: "Looking for a dinner?",
+    description: "@SHAREFOOD_DESC@",
+    githubLink: "https://github.com/ProjectPB/Sharefood",
+    websiteLink: "https://pb-sharefood.web.app/",
+    swapSides: false,
+  };
+
+  const concertonConfig = {
+    fscImg: concertonFscImg,
+    mobileImg: concertonMobileImg,
+    title: "ConcertON",
+    upperText: "Want to watch a concert?",
+    description: "@CONCERTON_DESC@",
+    githubLink: "https://github.com/ProjectPB/ConcertON",
+    websiteLink: "https://pb-concerton.web.app/",
+    swapSides: true,
+  };
+
+  const wearshopConfig = {
+    fscImg: wearshopFscImg,
+    mobileImg: wearshopMobileImg,
+    title: "Wearshop",
+    upperText: "Looking for brand new clothes?",
+    description: "@WEARSHOP_DESC@",
+    githubLink: "https://github.com/ProjectPB/Wearshop",
+    websiteLink: "https://pb-wearshop.web.app/",
+    swapSides: false,
+  };
+
   return (
     <ProjectsContainer>
       <Title {...titleConfig} />
-
       <ProjectsWrapper>
-        <LeftContainer>
-          <FullscreenImage src={fscImg} />
-          <MobileImage src={mobileImg} />
-        </LeftContainer>
-        <RightContainer>
-          <TextContainer>
-            <TextLarge>Sharefood</TextLarge>
-            <TextMedium>Looking for a dinner?</TextMedium>
-            <TextSmall>
-              Website allows users to find recipes and submit their own ideas.
-            </TextSmall>
-          </TextContainer>
-
-          <IconLinksWrapper>
-            <Link href="https://github.com/ProjectPB/Sharefood" target="_blank">
-              <GitHubIcon />
-            </Link>
-            <Link href="https://pb-sharefood.web.app/" target="_blank">
-              <OpenIcon />
-            </Link>
-          </IconLinksWrapper>
-        </RightContainer>
+        <Project {...sharefoodConfig} />
+        <Project {...concertonConfig} />
+        <Project {...wearshopConfig} />
       </ProjectsWrapper>
     </ProjectsContainer>
   );
