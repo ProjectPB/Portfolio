@@ -1,9 +1,10 @@
 import React from "react";
-import Banner from "./components/Banner";
 import Header from "./components/Header";
+import Banner from "./components/Banner";
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Roadmap from "./components/Roadmap";
-import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Skills />
       <Projects />
       <Roadmap />
+      <Contact />
     </div>
   );
 };
