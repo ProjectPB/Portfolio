@@ -17,7 +17,9 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const LeftContainer = styled.div``;
+export const LeftContainer = styled.div`
+  padding-bottom: 3px;
+`;
 
 export const RightContainer = styled.div``;
 
@@ -32,7 +34,7 @@ export const List = styled.ul`
   list-style-type: none;
   display: flex;
   align-items: center;
-  margin: 0 -25px;
+  margin: 0px -27px;
 `;
 
 export const ListItem = styled.li`
@@ -40,4 +42,28 @@ export const ListItem = styled.li`
   font-weight: 600;
   cursor: pointer;
   margin: 0 25px;
+  position: relative;
+  padding: 0 2px 3px 2px;
+
+  :after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+    background-color: orangered;
+    transform-origin: center;
+  }
+
+  :hover::after {
+    transform: scaleX(1);
+  }
+
+  :hover {
+    opacity: 0.75;
+  }
 `;
