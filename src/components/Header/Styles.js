@@ -1,32 +1,48 @@
 import styled from "styled-components";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Close, Menu } from "@mui/icons-material";
+
+export const HeaderWrapper = styled.div`
+  position: fixed;
+  width: 100%;
+  max-width: 1500px;
+  z-index: 99;
+`;
 
 export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 15%;
-  height: 50px;
-  position: relative;
-  margin-top: 20px;
+  position: absolute;
+  background-color: white;
+  padding: 20px 10% 0 10%;
+  height: 70px;
+  width: 100%;
+  z-index: 99;
+  border-bottom: ${(props) => props.border && "1px solid gold"};
 
   @media (max-width: 992px) {
     padding: 5px 15px;
-    position: static;
     margin: 0;
   }
 `;
 
 export const LeftContainer = styled.div`
-  padding-bottom: 3px;
+  margin-bottom: 5px;
 `;
 
 export const RightContainer = styled.div``;
 
-export const IconMenu = styled(MenuIcon)`
+export const MenuIcon = styled(Menu)`
   height: 35px !important;
   width: 35px !important;
-  margin-top: 7.5px;
+  margin-top: 2.5px;
+  cursor: pointer;
+`;
+
+export const CloseIcon = styled(Close)`
+  height: 35px !important;
+  width: 35px !important;
+  margin-top: 2.5px;
   cursor: pointer;
 `;
 

@@ -21,36 +21,34 @@ import {
 const Banner = () => {
   return (
     <BannerContainer>
-      <Wrapper>
-        <TextContainer>
-          <TextLarge>Hello there!</TextLarge>
+      <TextContainer>
+        <TextLarge>Hello there!</TextLarge>
 
-          <MediumTextWrapper>
-            <TextMedium>My name is Patryk</TextMedium>
-            <TextMedium>I am a web developer from Poland</TextMedium>
-          </MediumTextWrapper>
+        <MediumTextWrapper>
+          <TextMedium>My name is Patryk</TextMedium>
+          <TextMedium>I am a web developer from Poland</TextMedium>
+        </MediumTextWrapper>
 
-          <ButtonWrapper>
-            <Button primary>Contact me</Button>
-          </ButtonWrapper>
-        </TextContainer>
+        <ButtonWrapper>
+          <Button primary>Contact me</Button>
+        </ButtonWrapper>
+      </TextContainer>
 
-        <ImageContainer>
-          <Image src={bannerImg} />
+      <ImageContainer>
+        <Image src={bannerImg} />
 
-          <IconLinksWrapper>
-            <Link>
-              <GitHubIcon />
-            </Link>
-            <Link>
-              <LinkedInIcon />
-            </Link>
-            <Link>
-              <GoogleIcon />
-            </Link>
-          </IconLinksWrapper>
-        </ImageContainer>
-      </Wrapper>
+        <IconLinksWrapper>
+          <Link>
+            <GitHubIcon />
+          </Link>
+          <Link>
+            <LinkedInIcon />
+          </Link>
+          <Link>
+            <GoogleIcon />
+          </Link>
+        </IconLinksWrapper>
+      </ImageContainer>
     </BannerContainer>
   );
 };

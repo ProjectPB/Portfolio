@@ -1,19 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { useWidth } from "./../../hooks";
 import Logo from "../Logo";
+import Navbar from "../Navbar";
 import {
   HeaderContainer,
   LeftContainer,
   RightContainer,
-  IconMenu,
   List,
   ListItem,
+  MenuIcon,
+  CloseIcon,
+  HeaderWrapper,
 } from "./Styles";
-import Navbar from "../Navbar";
 
 const Header = () => {
   const width = useWidth();
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [borderShow, setBorderShow] = useState(false);
+
+  const displayBorder = () => {
+    if (window.scrollY > 1) {
+      setBorderShow(true);
+    } else {
+      setBorderShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", displayBorder);
+    return () => window.removeEventListener("scroll", displayBorder);
+  }, []);
 
   const openNavbar = () => {
     setNavbarOpen(!navbarOpen);
@@ -26,25 +42,28 @@ const Header = () => {
   }, [width]);
 
   return (
-    <HeaderContainer>
-      <LeftContainer>
-        <Logo />
-      </LeftContainer>
+    <HeaderWrapper>
+      <HeaderContainer border={!navbarOpen && borderShow}>
+        <LeftContainer>
+          <Logo />
+        </LeftContainer>
 
-      <Navbar open={navbarOpen} />
+        <Navbar open={navbarOpen} />
 
-      <RightContainer>
-        {width > 992 && (
-          <List>
-            <ListItem>Projects</ListItem>
-            <ListItem>Skills</ListItem>
-            <ListItem>Goals</ListItem>
-            <ListItem>Contact</ListItem>
-          </List>
-        )}
-        {width <= 992 && <IconMenu onClick={openNavbar} />}
-      </RightContainer>
-    </HeaderContainer>
+        <RightContainer>
+          {width > 992 && (
+            <List>
+              <ListItem>Projects</ListItem>
+              <ListItem>Skills</ListItem>
+              <ListItem>Goals</ListItem>
+              <ListItem>Contact</ListItem>
+            </List>
+          )}
+          {width <= 992 && !navbarOpen && <MenuIcon onClick={openNavbar} />}
+          {width <= 992 && navbarOpen && <CloseIcon onClick={openNavbar} />}
+        </RightContainer>
+      </HeaderContainer>
+    </HeaderWrapper>
   );
 };
 
