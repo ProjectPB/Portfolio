@@ -12,40 +12,52 @@ import { ProjectsContainer, ProjectsWrapper } from "./Styles";
 const Projects = () => {
   const titleConfig = {
     upperText: "Projects",
-    lowerText_1: "Check out my projects",
+    lowerText_1: "Make sure to check out my latest work!",
   };
 
   const sharefoodConfig = {
     fscImg: sharefoodFscImg,
     mobileImg: sharefoodMobileImg,
     title: "Sharefood",
-    upperText: "Looking for a dinner?",
-    description: "@SHAREFOOD_DESC@",
+    upperText: "Making a ",
+    keyword: "dinner",
+    keywordColor: "#ffc000",
+    description:
+      "On Sharefood, users are able to browse recipes, find them using search bar and add them to favorites. Users can also submit their own ideas after signing up.",
     githubLink: "https://github.com/ProjectPB/Sharefood",
     websiteLink: "https://pb-sharefood.web.app/",
     swapSides: false,
+    inDevelopment: true,
   };
 
   const concertonConfig = {
     fscImg: concertonFscImg,
     mobileImg: concertonMobileImg,
     title: "ConcertON",
-    upperText: "Want to watch a concert?",
-    description: "@CONCERTON_DESC@",
+    upperText: "Want to ",
+    keyword: "hang out",
+    keywordColor: "#8b0000;",
+    description:
+      "Concerton has been created to let users watch concerts' livestreams and comment the event on the realtime chat.",
     githubLink: "https://github.com/ProjectPB/ConcertON",
     websiteLink: "https://pb-concerton.web.app/",
     swapSides: true,
+    inDevelopment: false,
   };
 
   const wearshopConfig = {
     fscImg: wearshopFscImg,
     mobileImg: wearshopMobileImg,
     title: "Wearshop",
-    upperText: "Looking for brand new clothes?",
-    description: "@WEARSHOP_DESC@",
+    upperText: "Looking for ",
+    keyword: "new clothes",
+    keywordColor: "#1a50a1",
+    description:
+      "Wearshop is an E-commerce website which allows users to browse clothes using type filters, add products to cart and submit orders.",
     githubLink: "https://github.com/ProjectPB/Wearshop",
     websiteLink: "https://pb-wearshop.web.app/",
     swapSides: false,
+    inDevelopment: false,
   };
 
   return (

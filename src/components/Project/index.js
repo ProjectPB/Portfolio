@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  DevIcon,
   FullscreenImage,
   GitHubIcon,
   IconLinksWrapper,
@@ -10,6 +11,9 @@ import {
   ProjectContainer,
   RightContainer,
   TextContainer,
+  TextDev,
+  TextDevWrapper,
+  TextKeyword,
   TextLarge,
   TextMedium,
   TextSmall,
@@ -24,6 +28,9 @@ const Project = ({
   githubLink,
   websiteLink,
   swapSides,
+  keyword,
+  keywordColor,
+  inDevelopment,
 }) => {
   return (
     <ProjectContainer swap={swapSides}>
@@ -31,19 +38,26 @@ const Project = ({
         <FullscreenImage src={fscImg} />
         <MobileImage src={mobileImg} swap={swapSides} />
       </LeftContainer>
-
       <RightContainer>
         <TextContainer>
           <TextLarge>{title}</TextLarge>
-          <TextMedium>{upperText}</TextMedium>
+          <TextMedium>
+            {upperText}{" "}
+            <TextKeyword color={keywordColor}>{keyword}</TextKeyword>?
+          </TextMedium>
           <TextSmall>{description}</TextSmall>
+          {inDevelopment && (
+            <TextDevWrapper>
+              <DevIcon />
+              <TextDev>CONSTANTLY DEVELOPED</TextDev>
+            </TextDevWrapper>
+          )}
         </TextContainer>
-
         <IconLinksWrapper>
-          <Link href={githubLink} target="_blank">
+          <Link href={githubLink} target="_blank" rel="noopener noreferrer">
             <GitHubIcon />
           </Link>
-          <Link href={websiteLink} target="_blank">
+          <Link href={websiteLink} target="_blank" rel="noopener noreferrer">
             <OpenIcon />
           </Link>
         </IconLinksWrapper>
