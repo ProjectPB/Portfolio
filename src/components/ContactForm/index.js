@@ -1,65 +1,70 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Button from "../Button";
 import Input from "../Input";
 import Textarea from "./../Textarea";
 import { FormContainer, FormRow } from "./Styles";
 
 const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const form = useRef();
 
-  const submitForm = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    alert(
-      `name: ${name}, email: ${email}, subject: ${subject}, message: ${message}`
-    );
-    setName("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
+
+    emailjs
+      .sendForm(
+        "service_qkqbp4z",
+        "template_26dhx9w",
+        form.current,
+        "user_oLUpPMIC5F8v3LfbSPTit"
+      )
+      .then(
+        () => {
+          alert("Thank you for a message!");
+          e.target.reset();
+        },
+        (error) => {
+          alert(error.text);
+        }
+      );
   };
 
   const nameConfig = {
     label: "Name",
-    value: name,
-    handleChange: (e) => setName(e.target.value),
+    type: "text",
+    name: "user_name",
     required: true,
   };
 
   const emailConfig = {
     label: "Email",
     type: "email",
-    value: email,
-    handleChange: (e) => setEmail(e.target.value),
+    name: "user_email",
     required: true,
   };
 
   const subjectConfig = {
     label: "Subject",
-    value: subject,
-    handleChange: (e) => setSubject(e.target.value),
+    name: "subject",
     required: true,
   };
 
   const messageConfig = {
     label: "Message",
     type: "text",
-    value: message,
-    handleChange: (e) => setMessage(e.target.value),
+    name: "message",
     required: true,
   };
 
   return (
-    <FormContainer onSubmit={submitForm}>
+    <FormContainer onSubmit={sendEmail} ref={form}>
       <FormRow>
         <Input {...nameConfig} />
         <Input {...emailConfig} />
       </FormRow>
       <Input {...subjectConfig} />
       <Textarea {...messageConfig} />
-      <Button primary type="submit">
+      <Button primary type="submit" value="Send">
         Send message
       </Button>
     </FormContainer>
