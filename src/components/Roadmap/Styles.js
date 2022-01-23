@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const RoadmapContainer = styled.div`
-  border-top: 1px solid gold;
-  padding: 20px 0;
+  padding: 25px 0;
   width: 100%;
+  background-color: #f2f2f2;
 `;
 
 export const StepsWrapper = styled.div`
@@ -14,10 +14,11 @@ export const StepsWrapper = styled.div`
   max-width: 700px;
   margin: 0 auto;
   padding: 10px 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border-radius: 15px;
-  outline: 1px solid gold;
+  border: 1px solid gold;
 
-  @media (max-width: 768px) {
-    width: 90%;
-  }
+    @media (max-width: 768px) {
+      width: 90%;
+    }
 `;

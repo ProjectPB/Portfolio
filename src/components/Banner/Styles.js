@@ -4,10 +4,12 @@ import LinkedIn from "@mui/icons-material/LinkedIn";
 import Google from "@mui/icons-material/Google";
 
 export const BannerContainer = styled.div`
-  border-bottom: 1px solid gold;
   height: 100vh;
   display: flex;
   justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 1500px;
+  max-height: 900px;
 
   @media (max-width: 768px) {
     flex-direction: column;

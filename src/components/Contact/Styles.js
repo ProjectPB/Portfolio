@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const ContactContainer = styled.div`
-  padding: 20px 0;
-  border-top: 1px solid gold;
+  padding: 25px 0;
 `;
 
 export const ContactWrapper = styled.div`

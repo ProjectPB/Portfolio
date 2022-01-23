@@ -1,50 +1,49 @@
 import React from "react";
 import Title from "../Title";
 import Step from "./Step";
-import { CheckCircle } from "@mui/icons-material";
-import CircularProgress from "@mui/material/CircularProgress";
 import { RoadmapContainer, StepsWrapper } from "./Styles";
 
 const Roadmap = () => {
   const titleConfig = {
     upperText: "Goals",
-    lowerText_1: "Development",
-    lowerText_2: "Currently working on...",
+    lowerText_1:
+      "Sustainable development and achieving goals are very important for me.",
+    lowerText_2: "Check what I am currently working on!",
   };
 
   const steps = [
     {
       text: "Finish Codecademy Web Development course",
-      icon: CircularProgress,
+      progress: "ongoing",
     },
     {
       text: "Create clones of the most popular websites",
-      icon: CheckCircle,
+      progress: "done",
     },
     {
       text: "Create Sharefood project",
-      icon: CheckCircle,
+      progress: "done",
     },
     {
       text: "Create Concerton project",
-      icon: CheckCircle,
+      progress: "done",
     },
     {
       text: "Create Wearshop project",
-      icon: CheckCircle,
+      progress: "done",
     },
     {
       text: "Create Portfolio project",
-      icon: CheckCircle,
+      progress: "done",
     },
     {
       text: "Land a full time job as a developer",
-      icon: CircularProgress,
+      progress: "ongoing",
     },
-    { text: "Learn Typescript fundamentals", icon: CircularProgress },
+    { text: "Learn Typescript fundamentals", progress: "ongoing" },
     {
       text: "Maintain and improve Sharefood to scale to many users",
-      icon: CircularProgress,
+      progress: "future",
     },
   ];
 
@@ -53,8 +52,8 @@ const Roadmap = () => {
       <Title {...titleConfig} />
 
       <StepsWrapper>
-        {steps.map(({ text, icon }, id) => (
-          <Step text={text} Icon={icon} key={id} />
+        {steps.map(({ text, progress }, id) => (
+          <Step text={text} progress={progress} key={id} />
         ))}
       </StepsWrapper>
     </RoadmapContainer>
