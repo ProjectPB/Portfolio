@@ -1,4 +1,5 @@
 import React from "react";
+import Title from "../Title";
 import styledcomponents_logo from "./../../assets/skills/sc.png";
 import sass_logo from "./../../assets/skills/sass.png";
 import redux_logo from "./../../assets/skills/redux.png";
@@ -14,10 +15,11 @@ import {
   SkillIcon,
   SkillName,
   Skill,
+  SkillNameContainer,
+  SliderContainer,
 } from "./Styles";
-import Title from "../Title";
 
-const skills = [
+const skillsData = [
   { icon: htmlcssjs_logo, name: "HTML/CSS/JS" },
   { icon: react_logo, name: "React JS" },
   { icon: redux_logo, name: "Redux" },
@@ -36,23 +38,41 @@ const Skills = () => {
   const titleConfig = {
     upperText: "Skills",
     lowerText_1:
-      "I create websites with emphasis on responsiveness, quick loading time and clean code",
+      "I create websites with emphasis on responsiveness, quick loading time and clean code.",
     lowerText_2:
       "The following languages and technologies help me with achieving goals:",
+  };
+
+  const sliderSettings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 5,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+    ],
   };
 
   return (
     <SkillsContainer>
       <Title {...titleConfig} />
 
-      <SkillsWrapper>
-        {skills.map(({ icon, name }, id) => (
-          <Skill key={id} className="XD">
-            <SkillIcon src={icon} />
-            <SkillName>{name}</SkillName>
-          </Skill>
-        ))}
-      </SkillsWrapper>
+      <SliderContainer>
+        <SkillsWrapper {...sliderSettings}>
+          {skillsData.map(({ icon, name }, id) => (
+            <Skill key={id} className="XD">
+              <SkillIcon src={icon} />
+              <SkillNameContainer>
+                <SkillName>{name}</SkillName>
+              </SkillNameContainer>
+            </Skill>
+          ))}
+        </SkillsWrapper>
+      </SliderContainer>
     </SkillsContainer>
   );
 };
