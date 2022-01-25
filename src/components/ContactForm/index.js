@@ -1,15 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import Loading from "react-loading";
 import emailjs from "@emailjs/browser";
 import Button from "../Button";
 import Input from "../Input";
 import Textarea from "./../Textarea";
-import { FormContainer, FormRow } from "./Styles";
+import { FormContainer, FormRow, SendingContainer } from "./Styles";
 
-const ContactForm = () => {
+const ContactForm = ({ send }) => {
+  const [sending, setSending] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setSending(true);
 
     emailjs
       .sendForm(
@@ -20,7 +23,8 @@ const ContactForm = () => {
       )
       .then(
         () => {
-          alert("Thank you for a message!");
+          setSending(false);
+          send();
           e.target.reset();
         },
         (error) => {
@@ -56,7 +60,11 @@ const ContactForm = () => {
     required: true,
   };
 
-  return (
+  return sending ? (
+    <SendingContainer>
+      <Loading type="bars" color="gold" height={100} width={100} />
+    </SendingContainer>
+  ) : (
     <FormContainer onSubmit={sendEmail} ref={form}>
       <FormRow>
         <Input {...nameConfig} />

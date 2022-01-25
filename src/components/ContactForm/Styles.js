@@ -12,6 +12,14 @@ export const FormContainer = styled.form`
   }
 `;
 
+export const SendingContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+`;
+
 export const FormRow = styled.div`
   display: flex;
   justify-content: space-between;

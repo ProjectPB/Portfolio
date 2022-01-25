@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useWidth } from "./../../hooks";
 import Title from "./../Title";
 import ContactForm from "../ContactForm";
@@ -13,9 +13,13 @@ import {
   EmailContainer,
   UpperText,
   EmailText,
+  LeftContainer,
+  NewMessageButton,
+  MessageText,
 } from "./Styles";
 
 const Contact = () => {
+  const [messageSent, setMessageSent] = useState(false);
   const width = useWidth();
   const titleConfig = {
     upperText: "Contact Me!",
@@ -26,7 +30,7 @@ const Contact = () => {
       <Title {...titleConfig} />
 
       <ContactWrapper>
-        <TextContainer>
+        <LeftContainer>
           <UpperText>
             <TextLarge>Interested in working together?</TextLarge>
             <TextMedium>
@@ -38,10 +42,18 @@ const Contact = () => {
             <Email />
             <EmailText>pbprojects01@gmail.com</EmailText>
           </EmailContainer>
-        </TextContainer>
+        </LeftContainer>
 
         <FormContainer>
-          <ContactForm />
+          {!messageSent && <ContactForm send={() => setMessageSent(true)} />}
+          {messageSent && (
+            <TextContainer>
+              <MessageText>Thank you for your message!</MessageText>
+              <NewMessageButton primary onClick={() => setMessageSent(false)}>
+                New Message
+              </NewMessageButton>
+            </TextContainer>
+          )}
         </FormContainer>
       </ContactWrapper>
     </ContactContainer>
