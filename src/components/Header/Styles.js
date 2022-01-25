@@ -5,10 +5,16 @@ export const HeaderWrapper = styled.div`
   position: fixed;
   width: 100%;
   z-index: 99;
-  max-width: 1500px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  top: 0;
+  height: 70px;
+  padding-top: 20px;
+  background-color: white;
+  border-bottom: ${(props) => props.border && "1px solid gold"};
+
+  @media (max-width: 992px) {
+    height: 60px;
+    padding-top: 10px;
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -16,15 +22,16 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   position: absolute;
+  max-width: 1500px;
   background-color: white;
-  padding: 20px 10% 0 10%;
-  height: 70px;
+  padding: 0 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 100%;
-  z-index: 99;
-  border-bottom: ${(props) => props.border && "1px solid gold"};
 
   @media (max-width: 992px) {
-    padding: 5px 15px;
+    padding: 0 10px;
     margin: 0;
   }
 `;
@@ -63,6 +70,7 @@ export const ListItem = styled.li`
   margin: 0 25px;
   position: relative;
   padding: 0 2px 3px 2px;
+  user-select: none;
 
   :after {
     content: "";

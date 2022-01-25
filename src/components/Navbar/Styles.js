@@ -9,7 +9,7 @@ export const NavbarContainer = styled.ul`
   background-color: white;
   position: fixed;
   z-index: 99;
-  top: 70px;
+  top: 60px;
   right: 0px;
   bottom: 0px;
   left: 0px;

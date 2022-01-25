@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "../Button";
 
 export const ContactContainer = styled.div`
-  padding: 25px 0;
+  padding: 50px 0;
 `;
 
 export const ContactWrapper = styled.div`

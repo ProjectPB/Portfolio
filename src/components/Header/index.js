@@ -42,8 +42,8 @@ const Header = () => {
   }, [width]);
 
   return (
-    <HeaderWrapper>
-      <HeaderContainer border={!navbarOpen && borderShow}>
+    <HeaderWrapper border={!navbarOpen && borderShow}>
+      <HeaderContainer>
         <LeftContainer>
           <Logo />
         </LeftContainer>

@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export const SkillsContainer = styled.div`
   width: 100%;
-  padding: 25px 0;
+  padding: 50px 0;
   background-color: #f2f2f2;
 `;
 
