@@ -20,7 +20,7 @@ import {
 
 const Banner = () => {
   return (
-    <BannerContainer>
+    <BannerContainer id="main">
       <TextContainer>
         <TextLarge>Hello there!</TextLarge>
 

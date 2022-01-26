@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <Title {...titleConfig} />
 
       <ContactWrapper>

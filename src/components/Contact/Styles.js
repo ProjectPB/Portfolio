@@ -135,6 +135,6 @@ export const FormContainer = styled.div`
   min-height: 325px;
 
   @media (max-width: 768px) {
-    min-height: 400px;
+    min-height: 425px;
   }
 `;

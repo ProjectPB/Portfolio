@@ -61,7 +61,7 @@ const Projects = () => {
   };
 
   return (
-    <ProjectsContainer>
+    <ProjectsContainer id="projects">
       <Title {...titleConfig} />
       <ProjectsWrapper>
         <Project {...sharefoodConfig} />

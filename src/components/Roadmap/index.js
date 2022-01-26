@@ -48,7 +48,7 @@ const Roadmap = () => {
   ];
 
   return (
-    <RoadmapContainer>
+    <RoadmapContainer id="roadmap">
       <Title {...titleConfig} />
 
       <StepsWrapper>

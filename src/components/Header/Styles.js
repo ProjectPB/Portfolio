@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Close, Menu } from "@mui/icons-material";
 
 export const HeaderWrapper = styled.div`
@@ -13,7 +13,9 @@ export const HeaderWrapper = styled.div`
 
   @media (max-width: 992px) {
     height: 60px;
-    padding-top: 10px;
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -31,7 +33,7 @@ export const HeaderContainer = styled.div`
   width: 100%;
 
   @media (max-width: 992px) {
-    padding: 0 10px;
+    padding: 0 15px;
     margin: 0;
   }
 `;
@@ -42,18 +44,25 @@ export const LeftContainer = styled.div`
 
 export const RightContainer = styled.div``;
 
-export const MenuIcon = styled(Menu)`
+const navIconStyle = css`
   height: 35px !important;
   width: 35px !important;
   margin-top: 2.5px;
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    height: 30px !important;
+    width: 30px !important;
+    margin-top: 0;
+  }
+`;
+
+export const MenuIcon = styled(Menu)`
+  ${navIconStyle}
 `;
 
 export const CloseIcon = styled(Close)`
-  height: 35px !important;
-  width: 35px !important;
-  margin-top: 2.5px;
-  cursor: pointer;
+  ${navIconStyle}
 `;
 
 export const List = styled.ul`
@@ -87,7 +96,7 @@ export const ListItem = styled.li`
   }
 
   :hover::after {
-    transform: scaleX(1);
+    transform: scaleX(0.99);
   }
 
   :hover {

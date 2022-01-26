@@ -1,14 +1,23 @@
 import React from "react";
+import { Link } from "react-scroll";
 import { NavbarContainer, ListItem } from "./Styles";
 
-const Navbar = ({ open }) => {
+const Navbar = ({ isOpen, open }) => {
   return (
-    open && (
+    isOpen && (
       <NavbarContainer>
-        <ListItem>Projects</ListItem>
-        <ListItem>Skills</ListItem>
-        <ListItem>Goals</ListItem>
-        <ListItem>Contact</ListItem>
+        <Link to="skills" smooth={true} offset={-60} onClick={open}>
+          <ListItem>Skills</ListItem>
+        </Link>
+        <Link to="projects" smooth={true} offset={-60} onClick={open}>
+          <ListItem>Projects</ListItem>
+        </Link>
+        <Link to="roadmap" smooth={true} offset={-60} onClick={open}>
+          <ListItem>Goals</ListItem>
+        </Link>
+        <Link to="contact" smooth={true} offset={-60} onClick={open}>
+          <ListItem>Contact</ListItem>
+        </Link>
       </NavbarContainer>
     )
   );

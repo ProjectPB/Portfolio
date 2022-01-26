@@ -58,7 +58,7 @@ const Skills = () => {
   };
 
   return (
-    <SkillsContainer>
+    <SkillsContainer id="skills">
       <Title {...titleConfig} />
 
       <SliderContainer>

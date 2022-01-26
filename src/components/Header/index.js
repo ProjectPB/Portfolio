@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { useWidth } from "./../../hooks";
 import Logo from "../Logo";
 import Navbar from "../Navbar";
@@ -32,7 +33,9 @@ const Header = () => {
   }, []);
 
   const openNavbar = () => {
-    setNavbarOpen(!navbarOpen);
+    if (width < 992) {
+      setNavbarOpen(!navbarOpen);
+    }
   };
 
   useEffect(() => {
@@ -45,18 +48,28 @@ const Header = () => {
     <HeaderWrapper border={!navbarOpen && borderShow}>
       <HeaderContainer>
         <LeftContainer>
-          <Logo />
+          <Link to="main" smooth={true} onClick={() => setNavbarOpen(false)}>
+            <Logo />
+          </Link>
         </LeftContainer>
 
-        <Navbar open={navbarOpen} />
+        <Navbar isOpen={navbarOpen} open={openNavbar} />
 
         <RightContainer>
           {width > 992 && (
             <List>
-              <ListItem>Projects</ListItem>
-              <ListItem>Skills</ListItem>
-              <ListItem>Goals</ListItem>
-              <ListItem>Contact</ListItem>
+              <Link to="skills" smooth={true} offset={-70}>
+                <ListItem>Skills</ListItem>
+              </Link>
+              <Link to="projects" smooth={true} offset={-70}>
+                <ListItem>Projects</ListItem>
+              </Link>
+              <Link to="roadmap" smooth={true} offset={-70}>
+                <ListItem>Goals</ListItem>
+              </Link>
+              <Link to="contact" smooth={true}>
+                <ListItem>Contact</ListItem>
+              </Link>
             </List>
           )}
           {width <= 992 && !navbarOpen && <MenuIcon onClick={openNavbar} />}
