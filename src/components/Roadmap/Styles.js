@@ -4,6 +4,8 @@ export const RoadmapContainer = styled.div`
   padding: 50px 0;
   width: 100%;
   background-color: #f2f2f2;
+  max-width: 1400px;
+  margin: 0 auto;
 `;
 
 export const StepsWrapper = styled.div`

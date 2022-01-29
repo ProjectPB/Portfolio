@@ -7,6 +7,8 @@ export const SkillsContainer = styled.div`
   width: 100%;
   padding: 50px 0;
   background-color: #f2f2f2;
+  max-width: 1400px;
+  margin: 0 auto;
 `;
 
 const sliderStyles = css`
