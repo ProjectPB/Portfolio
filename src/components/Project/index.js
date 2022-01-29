@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import {
   DevIcon,
   FullscreenImage,
@@ -32,13 +33,17 @@ const Project = ({
   keywordColor,
   inDevelopment,
 }) => {
+  useEffect(() => {
+    window.addEventListener("load", AOS.refresh);
+  }, []);
+
   return (
     <ProjectContainer swap={swapSides}>
       <LeftContainer>
         <FullscreenImage src={fscImg} />
         <MobileImage src={mobileImg} swap={swapSides} />
       </LeftContainer>
-      <RightContainer>
+      <RightContainer data-aos="fade-up" data-aos-delay="200">
         <TextContainer>
           <TextLarge>{title}</TextLarge>
           <TextMedium>

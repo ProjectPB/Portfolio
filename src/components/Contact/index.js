@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
 import { useWidth } from "./../../hooks";
 import Title from "./../Title";
 import ContactForm from "../ContactForm";
@@ -25,6 +26,10 @@ const Contact = () => {
     upperText: "Contact Me!",
   };
 
+  useEffect(() => {
+    window.addEventListener("load", AOS.refresh);
+  }, []);
+
   return (
     <ContactContainer id="contact">
       <Title {...titleConfig} />
@@ -38,7 +43,7 @@ const Contact = () => {
               form {width > "768" ? "on the right" : "below"}.
             </TextMedium>
           </UpperText>
-          <EmailContainer>
+          <EmailContainer data-aos="zoom-in">
             <Email />
             <EmailText>pbprojects01@gmail.com</EmailText>
           </EmailContainer>

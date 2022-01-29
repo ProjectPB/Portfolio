@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import Title from "../Title";
 import styledcomponents_logo from "./../../assets/skills/sc.png";
 import sass_logo from "./../../assets/skills/sass.png";
@@ -57,6 +58,10 @@ const Skills = () => {
     ],
   };
 
+  useEffect(() => {
+    window.addEventListener("load", AOS.refresh);
+  }, []);
+
   return (
     <SkillsContainer id="skills">
       <Title {...titleConfig} />
@@ -64,7 +69,12 @@ const Skills = () => {
       <SliderContainer>
         <SkillsWrapper {...sliderSettings}>
           {skillsData.map(({ icon, name }, id) => (
-            <Skill key={id} className="XD">
+            <Skill
+              key={id}
+              className="XD"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
               <SkillIcon src={icon} />
               <SkillNameContainer>
                 <SkillName>{name}</SkillName>

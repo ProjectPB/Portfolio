@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { init } from "@emailjs/browser";
 import Loading from "react-loading";
 import emailjs from "@emailjs/browser";
 import Button from "../Button";
@@ -9,6 +10,10 @@ import { FormContainer, FormRow, SendingContainer } from "./Styles";
 const ContactForm = ({ send }) => {
   const [sending, setSending] = useState(false);
   const form = useRef();
+
+  useEffect(() => {
+    init("user_oLUpPMIC5F8v3LfbSPTit");
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
