@@ -1,25 +1,27 @@
 import React from "react";
+
 import Title from "../Title";
+import Project from "../Project";
 import sharefoodFscImg from "./../../assets/projects/sharefood_max.jpg";
 import sharefoodMobileImg from "./../../assets/projects/sharefood_min.jpg";
 import wearshopFscImg from "./../../assets/projects/wearshop_max.jpg";
 import wearshopMobileImg from "./../../assets/projects/wearshop_min.jpg";
 import concertonFscImg from "./../../assets/projects/concerton_max.jpg";
 import concertonMobileImg from "./../../assets/projects/concerton_min.jpg";
-import Project from "../Project";
+
 import { ProjectsContainer, ProjectsWrapper } from "./Styles";
 
 const Projects = () => {
   const titleConfig = {
-    upperText: "Projects",
-    lowerText_1: "Make sure to check out my latest work!",
+    sectionName: "Projects",
+    upper: "Make sure to check out my latest work!",
   };
 
   const sharefoodConfig = {
     fscImg: sharefoodFscImg,
     mobileImg: sharefoodMobileImg,
     title: "Sharefood",
-    upperText: "Making a ",
+    sectionName: "Making a ",
     keyword: "dinner",
     keywordColor: "#ffc000",
     description:
@@ -34,7 +36,7 @@ const Projects = () => {
     fscImg: concertonFscImg,
     mobileImg: concertonMobileImg,
     title: "ConcertON",
-    upperText: "Want to ",
+    sectionName: "Want to ",
     keyword: "hang out",
     keywordColor: "#8b0000;",
     description:
@@ -49,7 +51,7 @@ const Projects = () => {
     fscImg: wearshopFscImg,
     mobileImg: wearshopMobileImg,
     title: "Wearshop",
-    upperText: "Looking for ",
+    sectionName: "Looking for ",
     keyword: "new clothes",
     keywordColor: "#1a50a1",
     description:

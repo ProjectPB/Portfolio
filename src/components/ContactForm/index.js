@@ -1,10 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { init } from "@emailjs/browser";
 import Loading from "react-loading";
-import emailjs from "@emailjs/browser";
+
 import Button from "../Button";
 import Input from "../Input";
 import Textarea from "./../Textarea";
+import { SERVICE_ID, TEMPLATE_ID, USER_ID } from "./config";
+
+import { color } from "../../utils/styles";
 import { FormContainer, FormRow, SendingContainer } from "./Styles";
 
 const ContactForm = ({ send }) => {
@@ -12,30 +16,23 @@ const ContactForm = ({ send }) => {
   const form = useRef();
 
   useEffect(() => {
-    init("user_oLUpPMIC5F8v3LfbSPTit");
+    init(USER_ID);
   }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
     setSending(true);
 
-    emailjs
-      .sendForm(
-        "service_qkqbp4z",
-        "template_26dhx9w",
-        form.current,
-        "user_oLUpPMIC5F8v3LfbSPTit"
-      )
-      .then(
-        () => {
-          setSending(false);
-          send();
-          e.target.reset();
-        },
-        (error) => {
-          alert(error.text);
-        }
-      );
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID).then(
+      () => {
+        setSending(false);
+        send();
+        e.target.reset();
+      },
+      (error) => {
+        alert(error.text);
+      }
+    );
   };
 
   const nameConfig = {
@@ -67,7 +64,7 @@ const ContactForm = ({ send }) => {
 
   return sending ? (
     <SendingContainer>
-      <Loading type="bars" color="gold" height={100} width={100} />
+      <Loading type="bars" color={color.primary} height={100} width={100} />
     </SendingContainer>
   ) : (
     <FormContainer onSubmit={sendEmail} ref={form}>

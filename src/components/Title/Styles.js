@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { color, font_size, font_weight } from "../../utils/styles";
 
 export const TitleContainer = styled.div`
   text-align: center;
@@ -7,22 +8,22 @@ export const TitleContainer = styled.div`
   padding: 0 20px;
 `;
 
-export const TextLarge = styled.h1`
-  display: block;
-  font-size: 36px;
-  font-weight: 700;
+export const SectionName = styled.h1`
+  ${font_size.large}
+  ${font_weight.medium}
 
   @media (max-width: 600px) {
-    font-size: 24px;
+    ${font_size.medium}
   }
 `;
 
-export const TextMedium = styled.h2`
-  display: block;
-  font-size: 16px;
-  font-weight: 400;
+export const Text = styled.h2`
+  ${font_size.medium}
+  ${font_weight.regular}
+  color: ${color.textLight};
+  margin-top: 2.5px;
 
   @media (max-width: 600px) {
-    font-size: 10px;
+    ${font_size.small}
   }
 `;

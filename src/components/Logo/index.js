@@ -1,4 +1,5 @@
 import React from "react";
+
 import { LogoContainer, Span, Typography } from "./Styles";
 
 const Logo = () => {

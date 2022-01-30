@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import { color, shadowBackground } from "../../utils/styles";
 
 export const RoadmapContainer = styled.div`
   padding: 50px 0;
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: ${color.backgroundDark};
   max-width: 1400px;
   margin: 0 auto;
+  overflow: hidden;
 `;
 
 export const StepsWrapper = styled.div`
@@ -16,9 +18,7 @@ export const StepsWrapper = styled.div`
   max-width: 700px;
   margin: 0 auto;
   padding: 10px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  border-radius: 15px;
-  border: 1px solid gold;
+  ${shadowBackground}
 
   @media (max-width: 768px) {
     width: 90%;

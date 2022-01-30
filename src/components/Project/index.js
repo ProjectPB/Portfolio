@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
+
 import {
+  Description,
   DevIcon,
   FullscreenImage,
   GitHubIcon,
+  Heading,
   IconLinksWrapper,
+  InviteText,
   LeftContainer,
   Link,
   MobileImage,
@@ -15,16 +19,13 @@ import {
   TextDev,
   TextDevWrapper,
   TextKeyword,
-  TextLarge,
-  TextMedium,
-  TextSmall,
 } from "./Styles";
 
 const Project = ({
   fscImg,
   mobileImg,
   title,
-  upperText,
+  sectionName,
   description,
   githubLink,
   websiteLink,
@@ -43,14 +44,15 @@ const Project = ({
         <FullscreenImage src={fscImg} />
         <MobileImage src={mobileImg} swap={swapSides} />
       </LeftContainer>
+
       <RightContainer data-aos="fade-up" data-aos-delay="200">
         <TextContainer>
-          <TextLarge>{title}</TextLarge>
-          <TextMedium>
-            {upperText}{" "}
+          <Heading>{title}</Heading>
+          <InviteText>
+            {sectionName}{" "}
             <TextKeyword color={keywordColor}>{keyword}</TextKeyword>?
-          </TextMedium>
-          <TextSmall>{description}</TextSmall>
+          </InviteText>
+          <Description>{description}</Description>
           {inDevelopment && (
             <TextDevWrapper>
               <DevIcon />
@@ -58,12 +60,13 @@ const Project = ({
             </TextDevWrapper>
           )}
         </TextContainer>
+
         <IconLinksWrapper>
           <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-            <GitHubIcon />
+            <GitHubIcon alt="Github link" />
           </Link>
           <Link href={websiteLink} target="_blank" rel="noopener noreferrer">
-            <OpenIcon />
+            <OpenIcon alt="Website link" />
           </Link>
         </IconLinksWrapper>
       </RightContainer>

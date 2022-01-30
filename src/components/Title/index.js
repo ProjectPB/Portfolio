@@ -1,18 +1,19 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
-import { TextLarge, TextMedium, TitleContainer } from "./Styles";
 
-const Title = ({ upperText, lowerText_1, lowerText_2 }) => {
+import { SectionName, Text, TitleContainer } from "./Styles";
+
+const Title = ({ sectionName, upper, lower }) => {
   useEffect(() => {
     window.addEventListener("load", AOS.refresh);
   }, []);
 
   return (
     <TitleContainer>
-      <TextLarge data-aos="fade-up">{upperText}</TextLarge>
+      <SectionName data-aos="fade-up">{sectionName}</SectionName>
 
-      <TextMedium data-aos="fade-up">{lowerText_1}</TextMedium>
-      <TextMedium data-aos="fade-up">{lowerText_2}</TextMedium>
+      <Text data-aos="fade-up">{upper}</Text>
+      <Text data-aos="fade-up">{lower}</Text>
     </TitleContainer>
   );
 };

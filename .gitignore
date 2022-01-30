@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
+/src/components/ContactForm/config.js
 .pnp.js
 
 # testing

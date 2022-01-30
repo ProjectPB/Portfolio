@@ -1,14 +1,15 @@
 import React from "react";
+
 import Title from "../Title";
 import Step from "./Step";
+
 import { RoadmapContainer, StepsWrapper } from "./Styles";
 
 const Roadmap = () => {
   const titleConfig = {
-    upperText: "Goals",
-    lowerText_1:
-      "Sustainable development and achieving goals are very important for me.",
-    lowerText_2: "Check what I am currently working on!",
+    sectionName: "Goals",
+    upper: "Sustainable development is very important for me.",
+    lower: "Check what I am currently working on!",
   };
 
   const steps = [

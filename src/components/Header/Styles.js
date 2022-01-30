@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { color, font_size, font_weight } from "../../utils/styles";
 import { Close, Menu } from "@mui/icons-material";
 
 export const HeaderWrapper = styled.div`
@@ -9,7 +10,7 @@ export const HeaderWrapper = styled.div`
   height: 70px;
   padding-top: 20px;
   background-color: white;
-  border-bottom: ${(props) => props.border && "1px solid gold"};
+  border-bottom: ${(props) => props.border && `1px solid ${color.primary}`};
 
   @media (max-width: 992px) {
     height: 60px;
@@ -73,8 +74,8 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  font-size: 16px;
-  font-weight: 600;
+  ${font_size.small}
+  ${font_weight.medium};
   cursor: pointer;
   margin: 0 25px;
   position: relative;
@@ -91,7 +92,7 @@ export const ListItem = styled.li`
     left: 0;
     transform: scaleX(0);
     transition: transform 0.25s ease;
-    background-color: orangered;
+    background-color: ${color.secondary};
     transform-origin: center;
   }
 

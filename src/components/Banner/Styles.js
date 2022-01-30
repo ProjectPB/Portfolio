@@ -3,6 +3,7 @@ import GitHub from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import Google from "@mui/icons-material/Google";
 import ArrowCircleDownOutlinedIcon from "@mui/icons-material/ArrowCircleDownOutlined";
+import { color, font_size, font_weight } from "../../utils/styles";
 
 export const BannerContainer = styled.div`
   position: relative;
@@ -37,7 +38,7 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const LargeTextWrapper = styled.div`
+export const HeadingWrapper = styled.div`
   display: flex;
   align-items: center;
 
@@ -47,13 +48,12 @@ export const LargeTextWrapper = styled.div`
   }
 `;
 
-export const TextLarge = styled.h1`
-  display: block;
-  font-size: 48px;
-  font-weight: 700;
+export const Heading = styled.h1`
+  ${font_size.xlarge}
+  ${font_weight.bold}
 
-  @media (max-width: 768px) {
-    font-size: 36px;
+  @media (max-width: 600px) {
+    ${font_size.large}
   }
 `;
 
@@ -67,33 +67,32 @@ export const Img = styled.img`
   }
 `;
 
-export const TextMedium = styled.p`
-  font-size: 24px;
-  font-weight: 300;
-  color: #8c8c8c;
-  display: block;
+export const Text = styled.p`
+  ${font_size.medium}
+  ${font_weight.light}
+  color: ${color.textLight};
 
   &:not(:last-child) {
     margin-bottom: 5px;
   }
 
   @media (max-width: 768px) {
-    font-size: 18px;
+    ${font_size.small}
   }
 `;
 
-export const SpanMedium = styled.span`
-  font-size: 26px;
-  font-weight: 400;
+export const Keyword = styled.span`
+  ${font_size.custom(26)}
+  ${font_weight.regular}
   color: ${(props) => props.color && props.color};
 
   @media (max-width: 768px) {
-    font-size: 20px;
+    ${font_size.custom(18)}
     line-height: 1.5;
   }
 `;
 
-export const MediumTextWrapper = styled.div`
+export const TextWrapper = styled.div`
   margin-top: 10px;
 `;
 
@@ -131,7 +130,7 @@ const iconStyle = css`
   transform: scale(2);
   margin: 0 20px;
   object-fit: contain;
-  color: lightgray;
+  color: ${color.backgroundMedium};
 `;
 
 export const GitHubIcon = styled(GitHub)`
@@ -151,17 +150,17 @@ export const LinkRef = styled.a`
   cursor: pointer;
 
   &:hover ${GitHubIcon} {
-    color: #333;
+    color: ${color.github};
     transition: ease-in-out 0.2s;
   }
 
   &:hover ${LinkedInIcon} {
-    color: #0e76a8;
+    color: ${color.linkedin};
     transition: ease-in-out 0.2s;
   }
 
   &:hover ${GoogleIcon} {
-    color: #db4a39;
+    color: ${color.google};
     transition: ease-in-out 0.2s;
   }
 `;
@@ -176,8 +175,13 @@ export const ScrollDownContainer = styled.div`
 `;
 
 export const ScrollIcon = styled(ArrowCircleDownOutlinedIcon)`
-  color: gold;
+  color: ${color.primary};
   height: 75px !important;
   width: 75px !important;
   cursor: pointer;
+
+  :hover {
+    color: ${color.secondary};
+    transition: ease-in-out 0.2s;
+  }
 `;

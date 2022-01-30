@@ -1,14 +1,16 @@
 import styled from "styled-components";
+import { font_size, font_weight } from "./../../utils/styles";
 
 export const Typography = styled.h1`
-  display: block;
   cursor: pointer;
   user-select: none;
-  font-weight: 700;
-  font-size: 24px;
+  ${font_weight.bold}
+  ${font_size.medium}
 
   @media (max-width: 600px) {
-    font-size: 18px;
+    position: relative;
+    top: 2.5px;
+    ${font_size.small}
   }
 `;
 

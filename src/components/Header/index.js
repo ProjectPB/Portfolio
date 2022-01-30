@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import { useWidth } from "./../../hooks";
+
 import Logo from "../Logo";
 import Navbar from "../Navbar";
+
 import {
   HeaderContainer,
   LeftContainer,

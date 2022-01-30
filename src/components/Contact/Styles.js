@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { color, font_size, font_weight } from "../../utils/styles";
 import Button from "../Button";
 
 export const ContactContainer = styled.div`
@@ -32,9 +33,9 @@ export const LeftContainer = styled.div`
   }
 `;
 
-export const UpperText = styled.div`
+export const HeadingWrapper = styled.div`
   flex: 0.3;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid ${color.backgroundMedium};
   padding-bottom: 10px;
   margin-bottom: 10px;
 
@@ -54,7 +55,7 @@ export const UpperText = styled.div`
   }
 `;
 
-export const TextContainer = styled.div`
+export const SentContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -62,46 +63,33 @@ export const TextContainer = styled.div`
   align-items: center;
 `;
 
-export const TextLarge = styled.h1`
-  display: block;
-  font-size: 24px;
-  font-weight: 600;
-  @media (max-width: 600px) {
-    font-size: 20px;
-  }
+export const Heading = styled.h1`
+  ${font_size.medium}
+  ${font_weight.medium}
 `;
 
-export const MessageText = styled(TextLarge)`
-  font-size: 20px;
+export const MessageText = styled.h2`
+  ${font_size.small}
+  ${font_weight.medium}
   padding-top: 20px;
-
-  @media (max-width: 600px) {
-    font-size: 16px;
-  }
 `;
 
 export const NewMessageButton = styled(Button)`
   margin-top: 15px;
 `;
 
-export const TextMedium = styled.h2`
-  display: block;
-  font-size: 14px;
-  font-weight: 400;
-  color: #8c8c8c;
-
-  @media (max-width: 600px) {
-    font-size: 12px;
-  }
+export const Text = styled.h2`
+  ${font_size.small}
+  ${font_weight.regular}
+  color: ${color.textLight};
 `;
 
 export const EmailText = styled.h3`
-  display: block;
-  font-size: 20px;
-  font-weight: 600;
+  ${font_size.custom(20)}
+  ${font_weight.medium};
 
   @media (max-width: 600px) {
-    font-size: 16px;
+    ${font_size.small}
   }
 `;
 
@@ -112,11 +100,11 @@ export const EmailContainer = styled.div`
     margin-right: 10px !important;
     width: 35px !important;
     height: 35px !important;
-    color: orangered;
+    color: ${color.secondary};
   }
 
   @media (max-width: 768px) {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid ${color.backgroundMedium};
     justify-content: center;
     padding-bottom: 10px;
   }

@@ -1,29 +1,31 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import { useWidth } from "./../../hooks";
+
 import Title from "./../Title";
 import ContactForm from "../ContactForm";
 import { Email } from "@mui/icons-material";
+
 import {
   ContactContainer,
   ContactWrapper,
   FormContainer,
-  TextContainer,
-  TextLarge,
-  TextMedium,
   EmailContainer,
-  UpperText,
   EmailText,
   LeftContainer,
   NewMessageButton,
   MessageText,
+  HeadingWrapper,
+  Heading,
+  Text,
+  SentContainer,
 } from "./Styles";
 
 const Contact = () => {
   const [messageSent, setMessageSent] = useState(false);
   const width = useWidth();
   const titleConfig = {
-    upperText: "Contact Me!",
+    sectionName: "Contact Me!",
   };
 
   useEffect(() => {
@@ -36,13 +38,13 @@ const Contact = () => {
 
       <ContactWrapper>
         <LeftContainer>
-          <UpperText>
-            <TextLarge>Interested in working together?</TextLarge>
-            <TextMedium>
+          <HeadingWrapper>
+            <Heading>Interested in working together?</Heading>
+            <Text>
               Please reach me out by an email or send me a message through the
               form {width > "768" ? "on the right" : "below"}.
-            </TextMedium>
-          </UpperText>
+            </Text>
+          </HeadingWrapper>
           <EmailContainer data-aos="zoom-in">
             <Email />
             <EmailText>pbprojects01@gmail.com</EmailText>
@@ -52,12 +54,12 @@ const Contact = () => {
         <FormContainer>
           {!messageSent && <ContactForm send={() => setMessageSent(true)} />}
           {messageSent && (
-            <TextContainer>
+            <SentContainer>
               <MessageText>Thank you for your message!</MessageText>
               <NewMessageButton primary onClick={() => setMessageSent(false)}>
                 New Message
               </NewMessageButton>
-            </TextContainer>
+            </SentContainer>
           )}
         </FormContainer>
       </ContactWrapper>

@@ -2,13 +2,19 @@ import styled, { css } from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {
+  color,
+  font_size,
+  font_weight,
+  shadowBackground,
+} from "../../utils/styles";
 
 export const SkillsContainer = styled.div`
   width: 100%;
   padding: 50px 0;
-  background-color: #f2f2f2;
-  max-width: 1400px;
-  margin: 0 auto;
+  background-color: ${color.backgroundDark};
+  /* max-width: 1400px;
+  margin: 0 auto; */
 `;
 
 const sliderStyles = css`
@@ -58,12 +64,9 @@ export const SliderContainer = styled.div`
 export const SkillsWrapper = styled(Slider)`
   cursor: grab;
   display: flex;
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  border-radius: 10px;
   padding: 40px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
 
+  ${shadowBackground}
   ${sliderStyles}
 
   :active {
@@ -104,7 +107,7 @@ export const SkillNameContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: 60px;
   margin-top: 15px;
 
   @media (max-width: 600px) {
@@ -114,10 +117,15 @@ export const SkillNameContainer = styled.div`
 `;
 
 export const SkillName = styled.h3`
-  font-size: 18px;
+  ${font_size.medium}
+  ${font_weight.regular}
   text-align: center;
 
+  @media (max-width: 768px) {
+    ${font_size.small}
+  }
+
   @media (max-width: 600px) {
-    font-size: 10px;
+    ${font_size.xsmall}
   }
 `;

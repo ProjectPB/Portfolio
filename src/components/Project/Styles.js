@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import GitHub from "@mui/icons-material/GitHub";
 import Open from "@mui/icons-material/OpenInNew";
 import BuildIcon from "@mui/icons-material/Build";
+import { color, font_size, font_weight } from "../../utils/styles";
 
 export const ProjectContainer = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ export const ProjectContainer = styled.div`
     margin: 30px auto;
 
     :not(:last-child) {
-      border-bottom: 1px solid lightgray;
+      border-bottom: 1px solid ${color.backgroundMedium};
     }
   }
 
@@ -67,44 +68,41 @@ export const RightContainer = styled.div`
 
 export const TextContainer = styled.div``;
 
-export const TextLarge = styled.h1`
-  display: block;
-  font-size: 32px;
-  font-weight: 700;
+export const Heading = styled.h1`
+  ${font_size.large}
+  ${font_weight.bold}
   margin-bottom: 15px;
 
   @media (max-width: 600px) {
-    font-size: 24px;
+    ${font_size.medium}
     margin-bottom: 10px;
   }
 `;
 
-export const TextMedium = styled.h2`
+export const InviteText = styled.h2`
   display: block;
-  font-size: 20px;
-  font-weight: 400;
+  ${font_size.custom(20)}
+  ${font_weight.regular}  
   margin-bottom: 15px;
 
   @media (max-width: 600px) {
-    font-size: 15px;
     margin-bottom: 10px;
   }
 `;
 
 export const TextKeyword = styled.span`
-  font-weight: 700;
+  ${font_weight.medium};
   color: ${(props) => props.color && props.color};
 `;
 
-export const TextSmall = styled.h3`
-  display: block;
-  color: #8c8c8c;
-  font-size: 16px;
-  font-weight: 400;
+export const Description = styled.h3`
+  ${font_weight.regular}
+  ${font_size.small}
+  color: ${color.textLight};
   margin-bottom: 15px;
 
   @media (max-width: 600px) {
-    font-size: 12px;
+    ${font_size.small}
     margin-bottom: 10px;
   }
 `;
@@ -113,7 +111,7 @@ export const TextDevWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fafafa;
+  ${color.backgroundLight};
   border: 1px solid #000072;
   padding: 5px 10px;
   border-radius: 10px;
@@ -126,17 +124,17 @@ export const TextDevWrapper = styled.div`
 `;
 
 export const TextDev = styled.h4`
-  color: #000072;
+  color: ${color.darkBlue};
   margin-left: 7px;
-  font-size: 16px;
+  ${font_size.small}
 
   @media (max-width: 600px) {
-    font-size: 12px;
+    ${font_size.xsmall}
   }
 `;
 
 export const DevIcon = styled(BuildIcon)`
-  color: #000072;
+  color: ${color.darkBlue};
 `;
 
 export const IconLinksWrapper = styled.div`
@@ -150,17 +148,17 @@ const iconStyle = css`
   transform: scale(2);
   margin: 0 20px;
   object-fit: contain;
-  color: lightgray;
+  color: ${color.backgroundMedium};
 `;
 
 export const GitHubIcon = styled(GitHub)`
   ${iconStyle}
-  color: #333;
+  color: ${color.github};
 `;
 
 export const OpenIcon = styled(Open)`
   ${iconStyle}
-  color: gold;
+  color: ${color.primary};
 `;
 
 const iconHoverEffect = css`

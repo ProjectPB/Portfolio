@@ -1,29 +1,32 @@
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import { useWidth } from "./../../hooks";
+
 import bannerImg from "./../../assets/banner/banner_image.png";
 import waveDogImg from "./../../assets/banner/dog_wave.png";
 import Button from "../Button";
+
+import { color } from "../../utils/styles";
 import {
   BannerContainer,
   ButtonWrapper,
   Image,
   ImageContainer,
-  MediumTextWrapper,
   TextContainer,
-  TextLarge,
-  TextMedium,
   IconLinksWrapper,
   GitHubIcon,
   LinkedInIcon,
   GoogleIcon,
-  SpanMedium,
+  Keyword,
+  Text,
   Img,
-  LargeTextWrapper,
   BannerWrapper,
   ScrollIcon,
   LinkRef,
   ScrollDownContainer,
+  HeadingWrapper,
+  Heading,
+  TextWrapper,
 } from "./Styles";
 
 const Banner = () => {
@@ -33,27 +36,26 @@ const Banner = () => {
     <BannerContainer id="main">
       <BannerWrapper>
         <TextContainer>
-          <LargeTextWrapper>
-            <TextLarge>Hello there!</TextLarge>
+          <HeadingWrapper>
+            <Heading>Hello there!</Heading>
             <Img src={waveDogImg} alt="Waving dog" />
-          </LargeTextWrapper>
+          </HeadingWrapper>
 
-          <MediumTextWrapper>
-            <TextMedium>
-              My name is <SpanMedium color="#eebc1d">Patryk</SpanMedium>.
-            </TextMedium>
-            <TextMedium>
+          <TextWrapper>
+            <Text>
+              My name is <Keyword color={color.gold}>Patryk</Keyword>.
+            </Text>
+            <Text>
               I'm a passionate, determined and hard working{" "}
-              <SpanMedium color="#6600cc">web developer</SpanMedium> from
-              Poland.
-            </TextMedium>
-            <TextMedium>
+              <Keyword color={color.blue}>web developer</Keyword> from Poland.
+            </Text>
+            <Text>
               Always looking for new{" "}
-              <SpanMedium color="#cc0000">challenges</SpanMedium> and
-              <SpanMedium color="#cc00cc"> cooperation </SpanMedium>
+              <Keyword color={color.red}>challenges</Keyword> and
+              <Keyword color={color.purple}> cooperation </Keyword>
               opportunities.
-            </TextMedium>
-          </MediumTextWrapper>
+            </Text>
+          </TextWrapper>
 
           {width > "768" && (
             <ButtonWrapper>
@@ -66,14 +68,15 @@ const Banner = () => {
           <Image src={bannerImg} alt="Banner image" />
 
           <IconLinksWrapper>
-            <LinkRef>
+            <LinkRef
+              href="https://github.com/ProjectPB"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <GitHubIcon alt="Github icon" />
             </LinkRef>
-            <LinkRef>
+            <LinkRef href="" target="_blank" rel="noopener noreferrer">
               <LinkedInIcon alt="Linkedin icon" />
-            </LinkRef>
-            <LinkRef>
-              <GoogleIcon alt="Google icon" />
             </LinkRef>
           </IconLinksWrapper>
 

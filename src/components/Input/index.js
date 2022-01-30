@@ -1,4 +1,5 @@
 import React from "react";
+
 import { InputContainer, Label, StyledInput } from "./Styles";
 
 const Input = ({ handleChange, label, ...otherProps }) => {

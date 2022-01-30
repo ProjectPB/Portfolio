@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
+
 import Title from "../Title";
 import styledcomponents_logo from "./../../assets/skills/sc.png";
 import sass_logo from "./../../assets/skills/sass.png";
@@ -10,6 +11,7 @@ import adobexd_logo from "./../../assets/skills/adobexd.png";
 import firebase_logo from "./../../assets/skills/firebase.png";
 import htmlcssjs_logo from "./../../assets/skills/htmlcssjs.png";
 import mui_logo from "./../../assets/skills/mui.png";
+
 import {
   SkillsContainer,
   SkillsWrapper,
@@ -37,11 +39,11 @@ const skillsData = [
 
 const Skills = () => {
   const titleConfig = {
-    upperText: "Skills",
-    lowerText_1:
-      "I create websites with emphasis on responsiveness, quick loading time and clean code.",
-    lowerText_2:
-      "The following languages and technologies help me with achieving goals:",
+    sectionName: "Skills",
+    upper:
+      "Smooth functionality, responsiveness and fast load time should be prioritized to create remarkable websites.",
+    lower:
+      "I use the following languages and technologies to achieve these goals:",
   };
 
   const sliderSettings = {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { color, font_size } from "../../utils/styles";
 
 export const TextareaContainer = styled.div`
   display: flex;
@@ -6,12 +7,12 @@ export const TextareaContainer = styled.div`
 `;
 
 export const Label = styled.h2`
-  font-size: 16px;
+  ${font_size.small}
   margin-bottom: 3px;
 
   :after {
     content: " *";
-    color: #ed4337;
+    color: ${color.red};
   }
 `;
 
@@ -20,11 +21,11 @@ export const StyledTextarea = styled.textarea`
   outline: none;
   height: 100px;
   padding: 10px;
-  border: 1px solid lightgray;
-  background-color: #fafafa;
+  border: 1px solid ${color.backgroundMedium};
+  background-color: ${color.backgroundLight};
   border-radius: 5px;
 
   :focus {
-    border: 2px solid gold;
+    border: 2px solid ${color.primary};
   }
 `;

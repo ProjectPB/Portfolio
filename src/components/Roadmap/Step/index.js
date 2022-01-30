@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
+
 import { CheckCircle } from "@mui/icons-material";
 import CircularProgress from "@mui/material/CircularProgress";
-import { IconContainer, MediumText, StepContainer } from "./Styles";
+
+import { IconContainer, Text, StepContainer } from "./Styles";
 
 const Step = ({ text, progress }) => {
   useEffect(() => {
@@ -14,9 +16,9 @@ const Step = ({ text, progress }) => {
       <IconContainer>
         {progress === "done" && <CheckCircle />}
         {progress === "ongoing" && <CircularProgress />}
-        {progress === "future" && ""}
+        {progress === "future" && <CheckCircle hidden />}
       </IconContainer>
-      <MediumText>{text}</MediumText>
+      <Text>{text}</Text>
     </StepContainer>
   );
 };

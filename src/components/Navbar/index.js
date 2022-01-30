@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+
 import { NavbarContainer, ListItem } from "./Styles";
 
 const Navbar = ({ isOpen, open }) => {

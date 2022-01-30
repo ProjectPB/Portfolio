@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { font_size, color } from "../../utils/styles";
 
 export const InputContainer = styled.div`
   display: flex;
@@ -6,25 +7,25 @@ export const InputContainer = styled.div`
 `;
 
 export const Label = styled.h2`
-  font-size: 16px;
+  ${font_size.small}
   margin-bottom: 3px;
 
   :after {
     content: " *";
-    color: #ed4337;
+    color: ${color.red};
   }
 `;
 
 export const StyledInput = styled.input`
-  border: 1px solid lightgray;
+  border: 1px solid ${color.backgroundMedium};
   margin: -1px;
-  background-color: #fafafa;
+  background-color: ${color.backgroundLight};
   border-radius: 5px;
   padding: 10px;
   outline: none;
 
   :focus {
-    border: 2px solid gold;
+    border: 2px solid ${color.primary};
     margin: -2px;
   }
 `;
