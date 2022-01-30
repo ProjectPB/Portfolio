@@ -31,10 +31,10 @@ export const font_size = {
 };
 
 export const font_weight = {
-  light: 'font-family: "Open Sans", sans-serif; font-weight: 300;',
-  regular: 'font-family: "Open Sans", sans-serif; font-weight: 400;',
-  medium: 'font-family: "Open Sans", sans-serif; font-weight: 600;',
-  bold: 'font-family: "Open Sans", sans-serif; font-weight: 700;',
+  light: 'font-family: "Montserrat", sans-serif; font-weight: 300;',
+  regular: 'font-family: "Montserrat", sans-serif; font-weight: 400;',
+  medium: 'font-family: "Montserrat", sans-serif; font-weight: 600;',
+  bold: 'font-family: "Montserrat", sans-serif; font-weight: 700;',
 };
 
 export const shadowBackground = css`
