@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 /src/components/ContactForm/config.js
+/src/firebase/config.js
 .pnp.js
 
 # testing
