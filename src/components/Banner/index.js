@@ -16,7 +16,6 @@ import {
   IconLinksWrapper,
   GitHubIcon,
   LinkedInIcon,
-  GoogleIcon,
   Keyword,
   Text,
   Img,
@@ -46,7 +45,7 @@ const Banner = () => {
               My name is <Keyword color={color.gold}>Patryk</Keyword>.
             </Text>
             <Text>
-              I'm a passionate, determined and hard working{" "}
+              I'm a passionate, determined and creative{" "}
               <Keyword color={color.blue}>web developer</Keyword> from Poland.
             </Text>
             <Text>

@@ -44,6 +44,7 @@ const Contact = () => {
               Please reach me out by an email or send me a message through the
               form {width > "768" ? "on the right" : "below"}.
             </Text>
+            <Text>Feedback regarding my work would also be appreciated!</Text>
           </HeadingWrapper>
           <EmailContainer data-aos="zoom-in">
             <Email />
