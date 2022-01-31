@@ -58,7 +58,9 @@ const Banner = () => {
 
           {width > "768" && (
             <ButtonWrapper>
-              <Button primary>Contact me</Button>
+              <Link to="contact" smooth={true}>
+                <Button primary>Contact me</Button>
+              </Link>
             </ButtonWrapper>
           )}
         </TextContainer>
@@ -81,7 +83,9 @@ const Banner = () => {
 
           {width <= "768" && (
             <ButtonWrapper>
-              <Button primary>Contact me</Button>
+              <Link to="contact" smooth={true}>
+                <Button primary>Contact me</Button>
+              </Link>
             </ButtonWrapper>
           )}
         </ImageContainer>

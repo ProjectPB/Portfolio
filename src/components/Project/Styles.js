@@ -21,8 +21,9 @@ export const ProjectContainer = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     margin: 15px auto;
+    padding: 15px 0;
   }
 `;
 

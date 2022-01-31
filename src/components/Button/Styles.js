@@ -11,6 +11,7 @@ export const ButtonContainer = styled.button`
   cursor: pointer;
   border-radius: 5px;
   text-transform: uppercase;
+  user-select: none;
   ${font_size.small}
 
   :active {

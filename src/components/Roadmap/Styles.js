@@ -8,6 +8,10 @@ export const RoadmapContainer = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 25px 0;
+  }
 `;
 
 export const StepsWrapper = styled.div`
@@ -16,7 +20,7 @@ export const StepsWrapper = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 30px auto 15px;
   padding: 10px;
   ${shadowBackground}
 

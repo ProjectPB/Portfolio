@@ -4,17 +4,21 @@ import Button from "../Button";
 
 export const ContactContainer = styled.div`
   padding: 50px 0;
+
+  @media (max-width: 768px) {
+    padding: 25px 0 0;
+  }
 `;
 
 export const ContactWrapper = styled.div`
   display: flex;
   max-width: 1000px;
-  margin: 0 auto;
-  padding: 15px;
+  margin: 30px auto 15px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 0 15px;
+    margin: 15px auto 0;
   }
 `;
 
@@ -28,7 +32,7 @@ export const LeftContainer = styled.div`
   @media (max-width: 768px) {
     text-align: center;
     flex: 1;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-right: 0;
   }
 `;
@@ -39,19 +43,9 @@ export const HeadingWrapper = styled.div`
   padding-bottom: 10px;
   margin-bottom: 10px;
 
-  & > h1,
-  h2 {
-    margin-bottom: 10px;
-  }
-
   @media (max-width: 768px) {
     border-bottom: none;
     padding-bottom: 0;
-
-    & > h1,
-    h2 {
-      margin-bottom: 5px;
-    }
   }
 `;
 
@@ -65,13 +59,23 @@ export const SentContainer = styled.div`
 
 export const Heading = styled.h1`
   ${font_size.medium}
-  ${font_weight.medium}
+  ${font_weight.regular}
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5px;
+  }
 `;
 
 export const MessageText = styled.h2`
   ${font_size.small}
   ${font_weight.medium}
   padding-top: 20px;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5px;
+  }
 `;
 
 export const NewMessageButton = styled(Button)`

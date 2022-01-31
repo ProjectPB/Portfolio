@@ -13,8 +13,12 @@ export const SkillsContainer = styled.div`
   width: 100%;
   padding: 50px 0;
   background-color: ${color.backgroundDark};
-  /* max-width: 1400px;
-  margin: 0 auto; */
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 25px 0;
+  }
 `;
 
 const sliderStyles = css`
@@ -46,7 +50,7 @@ const sliderStyles = css`
 `;
 
 export const SliderContainer = styled.div`
-  margin: 30px auto;
+  margin: 45px auto 15px;
   padding: 0 50px;
   max-width: 1200px;
   width: 100%;

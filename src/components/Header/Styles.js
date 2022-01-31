@@ -37,6 +37,10 @@ export const HeaderContainer = styled.div`
     padding: 0 15px;
     margin: 0;
   }
+
+  @media (min-width: 2000px) {
+    padding: 0 4%;
+  }
 `;
 
 export const LeftContainer = styled.div`
