@@ -63,7 +63,7 @@ const Header = () => {
               <Link to="skills" smooth={true} offset={-70}>
                 <ListItem>Skills</ListItem>
               </Link>
-              <Link to="projects" smooth={true} offset={-70}>
+              <Link to="projects" smooth={true} offset={200}>
                 <ListItem>Projects</ListItem>
               </Link>
               <Link to="roadmap" smooth={true} offset={-70}>

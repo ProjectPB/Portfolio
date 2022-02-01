@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
-  padding: 50px 0 70px;
+  padding: 0px 0 70px;
   max-width: 1500px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    padding: 25px 0 50px;
+    padding: 0 0 50px;
   }
 `;
 

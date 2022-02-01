@@ -73,7 +73,6 @@ const Skills = () => {
   return (
     <SkillsContainer id="skills">
       <Title {...titleConfig} />
-
       <SliderContainer>
         <SkillsWrapper {...sliderSettings}>
           {skillsData.map(({ icon, name }, id) => (

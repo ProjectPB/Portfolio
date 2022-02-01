@@ -12,7 +12,8 @@ import {
 export const SkillsContainer = styled.div`
   width: 100%;
   padding: 50px 0;
-  background-color: ${color.backgroundDark};
+  background: -webkit-linear-gradient(to bottom, #f4d03f, #16a085);
+  background: linear-gradient(to bottom, #f4d03f, #16a085);
   max-width: 1400px;
   margin: 0 auto;
 

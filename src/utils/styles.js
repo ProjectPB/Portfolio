@@ -1,11 +1,11 @@
 import { css } from "styled-components";
 
 export const color = {
-  primary: "gold",
-  secondary: "orangered",
+  secondary: "#16A085",
+  primary: "#45AA76",
+  analogous: "#F4D03F",
 
-  gold: "#eebc1d",
-  blue: "#6600cc",
+  react: "#61DAFB",
   darkBlue: "#000072",
   red: "#cc0000",
   purple: "#cc00cc",
@@ -14,7 +14,7 @@ export const color = {
   backgroundMedium: "#d3d3d3",
   backgroundDark: "#f2f2f2",
 
-  textLight: "#8c8c8c",
+  textLight: "#303030",
 
   linkedin: "#0e76a8",
   github: "#333",
@@ -42,4 +42,4 @@ export const shadowBackground = css`
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-`;
+`;  

@@ -42,11 +42,11 @@ const Banner = () => {
 
           <TextWrapper>
             <Text>
-              My name is <Keyword color={color.gold}>Patryk</Keyword>.
+              My name is <Keyword color={color.primary}>Patryk</Keyword>.
             </Text>
             <Text>
               I'm a passionate, determined and creative{" "}
-              <Keyword color={color.blue}>web developer</Keyword> from Poland.
+              <Keyword color={color.react}>web developer</Keyword> from Poland.
             </Text>
             <Text>
               Always looking for new{" "}

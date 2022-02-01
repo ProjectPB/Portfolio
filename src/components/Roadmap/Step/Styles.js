@@ -32,7 +32,7 @@ export const IconContainer = styled.div`
 export const Text = styled.h2`
   ${font_size.small}
   ${font_weight.regular}
-
+  
   @media (max-width: 600px) {
     ${font_size.small}
   }

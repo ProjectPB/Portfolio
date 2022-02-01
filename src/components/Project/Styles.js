@@ -160,6 +160,10 @@ export const GitHubIcon = styled(GitHub)`
 export const OpenIcon = styled(Open)`
   ${iconStyle}
   color: ${color.primary};
+
+  :hover {
+    color: ${color.secondary};
+  }
 `;
 
 const iconHoverEffect = css`

@@ -86,6 +86,7 @@ export const Text = styled.h2`
   ${font_size.small}
   ${font_weight.regular}
   color: ${color.textLight};
+  margin-top: 10px;
 `;
 
 export const EmailText = styled.h3`
