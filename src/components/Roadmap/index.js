@@ -15,7 +15,7 @@ const Roadmap = () => {
   const steps = [
     {
       text: "Finish Codecademy Web Development course",
-      progress: "ongoing",
+      progress: "done",
     },
     {
       text: "Create clones of the most popular websites",
@@ -44,7 +44,7 @@ const Roadmap = () => {
     { text: "Learn Typescript fundamentals", progress: "ongoing" },
     {
       text: "Maintain and improve Sharefood to scale to many users",
-      progress: "future",
+      progress: "ongoing",
     },
   ];
 
