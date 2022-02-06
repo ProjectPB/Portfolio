@@ -96,7 +96,7 @@ export const ListItem = styled.li`
     left: 0;
     transform: scaleX(0);
     transition: transform 0.25s ease;
-    background-color: ${color.secondary};
+    background-color: ${color.primaryDark};
     transform-origin: center;
   }
 

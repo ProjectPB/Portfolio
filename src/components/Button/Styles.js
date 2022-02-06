@@ -16,10 +16,10 @@ export const ButtonContainer = styled.button`
 
   :active {
     background-color: ${(props) =>
-      props.primary ? color.secondary : "transparent"};
-    color: ${(props) => (props.primary ? "black" : color.secondary)};
+      props.primary ? color.primaryDark : "transparent"};
+    color: ${(props) => (props.primary ? "black" : color.primaryDark)};
     border: ${(props) =>
-      props.primary ? "2px solid black" : `2px solid ${color.secondary}`};
+      props.primary ? "2px solid black" : `2px solid ${color.primaryDark}`};
   }
 
   :hover {

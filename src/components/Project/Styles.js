@@ -162,7 +162,7 @@ export const OpenIcon = styled(Open)`
   color: ${color.primary};
 
   :hover {
-    color: ${color.secondary};
+    color: ${color.primaryDark};
   }
 `;
 

@@ -14,7 +14,7 @@ export const IconContainer = styled.div`
   margin-right: 10px;
 
   & .MuiSvgIcon-root {
-    color: ${color.secondary};
+    color: ${color.primaryDark};
     margin-top: 8.25px;
     margin-left: 8px;
 
@@ -24,7 +24,7 @@ export const IconContainer = styled.div`
   }
 
   & .MuiCircularProgress-svg {
-    color: ${color.secondary};
+    color: ${color.primaryDark};
     transform: scale(0.5);
   }
 `;

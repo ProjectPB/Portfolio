@@ -2,12 +2,7 @@ import styled, { css } from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {
-  color,
-  font_size,
-  font_weight,
-  shadowBackground,
-} from "../../utils/styles";
+import { font_size, font_weight, shadowBackground } from "../../utils/styles";
 
 export const SkillsContainer = styled.div`
   width: 100%;

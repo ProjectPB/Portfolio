@@ -105,7 +105,7 @@ export const EmailContainer = styled.div`
     margin-right: 10px !important;
     width: 35px !important;
     height: 35px !important;
-    color: ${color.secondary};
+    color: ${color.primaryDark};
   }
 
   @media (max-width: 768px) {

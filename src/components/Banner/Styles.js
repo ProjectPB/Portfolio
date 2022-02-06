@@ -181,7 +181,7 @@ export const ScrollIcon = styled(ArrowCircleDownOutlinedIcon)`
   cursor: pointer;
 
   :hover {
-    color: ${color.secondary};
+    color: ${color.primaryDark};
     transition: ease-in-out 0.2s;
   }
 `;
