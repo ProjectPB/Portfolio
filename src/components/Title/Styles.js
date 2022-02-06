@@ -11,7 +11,7 @@ export const TitleContainer = styled.div`
 export const SectionName = styled.h1`
   ${font_size.large}
   ${font_weight.medium}
-
+  
   @media (max-width: 600px) {
     ${font_size.medium}
   }

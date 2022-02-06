@@ -4,6 +4,9 @@ import Button from "../Button";
 
 export const ContactContainer = styled.div`
   padding: 50px 0;
+  background-color: ${color.backgroundDark};
+  max-width: 1400px;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     padding: 25px 0 0;
@@ -39,7 +42,7 @@ export const LeftContainer = styled.div`
 
 export const HeadingWrapper = styled.div`
   flex: 0.3;
-  border-bottom: 1px solid ${color.backgroundMedium};
+  border-bottom: 1px solid ${color.primary};
   padding-bottom: 10px;
   margin-bottom: 10px;
 

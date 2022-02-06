@@ -21,7 +21,7 @@ export const StyledTextarea = styled.textarea`
   outline: none;
   height: 100px;
   padding: 10px;
-  border: 1px solid ${color.backgroundMedium};
+  border: 1px solid ${color.primary};
   background-color: ${color.backgroundLight};
   border-radius: 5px;
 

@@ -17,7 +17,7 @@ export const Label = styled.h2`
 `;
 
 export const StyledInput = styled.input`
-  border: 1px solid ${color.backgroundMedium};
+  border: 1px solid ${color.primary};
   margin: -1px;
   background-color: ${color.backgroundLight};
   border-radius: 5px;
@@ -25,7 +25,7 @@ export const StyledInput = styled.input`
   outline: none;
 
   :focus {
-    border: 2px solid ${color.primary};
+    border: 2px solid ${color.primaryDark};
     margin: -2px;
   }
 `;
