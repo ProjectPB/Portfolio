@@ -2,7 +2,6 @@ import React from "react";
 
 import Title from "../Title";
 import Project from "../Project";
-import WavyBackground from "../WavyBackground";
 import sharefoodFscImg from "./../../assets/projects/sharefood_max.jpg";
 import sharefoodMobileImg from "./../../assets/projects/sharefood_min.jpg";
 import wearshopFscImg from "./../../assets/projects/wearshop_max.jpg";
@@ -65,7 +64,6 @@ const Projects = () => {
 
   return (
     <ProjectsContainer id="projects">
-      <WavyBackground />
       <Title {...titleConfig} />
       <ProjectsWrapper>
         <Project {...sharefoodConfig} />

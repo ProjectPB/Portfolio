@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 
 import Title from "../Title";
+import WavyBackground from "../WavyBackground";
 import styledcomponents_logo from "./../../assets/skills/sc.png";
 import sass_logo from "./../../assets/skills/sass.png";
 import redux_logo from "./../../assets/skills/redux.png";
@@ -20,6 +21,7 @@ import {
   Skill,
   SkillNameContainer,
   SliderContainer,
+  SkillsMain,
 } from "./Styles";
 
 const skillsData = [
@@ -72,24 +74,27 @@ const Skills = () => {
 
   return (
     <SkillsContainer id="skills">
-      <Title {...titleConfig} />
-      <SliderContainer>
-        <SkillsWrapper {...sliderSettings}>
-          {skillsData.map(({ icon, name }, id) => (
-            <Skill
-              key={id}
-              className="XD"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <SkillIcon src={icon} />
-              <SkillNameContainer>
-                <SkillName>{name}</SkillName>
-              </SkillNameContainer>
-            </Skill>
-          ))}
-        </SkillsWrapper>
-      </SliderContainer>
+      <SkillsMain>
+        <Title {...titleConfig} />
+        <SliderContainer>
+          <SkillsWrapper {...sliderSettings}>
+            {skillsData.map(({ icon, name }, id) => (
+              <Skill
+                key={id}
+                className="XD"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <SkillIcon src={icon} />
+                <SkillNameContainer>
+                  <SkillName>{name}</SkillName>
+                </SkillNameContainer>
+              </Skill>
+            ))}
+          </SkillsWrapper>
+        </SliderContainer>
+      </SkillsMain>
+      <WavyBackground />
     </SkillsContainer>
   );
 };

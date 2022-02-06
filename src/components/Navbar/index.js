@@ -10,7 +10,7 @@ const Navbar = ({ isOpen, open }) => {
         <Link to="skills" smooth={true} offset={-60} onClick={open}>
           <ListItem>Skills</ListItem>
         </Link>
-        <Link to="projects" smooth={true} offset={80} onClick={open}>
+        <Link to="projects" smooth={true} offset={-80} onClick={open}>
           <ListItem>Projects</ListItem>
         </Link>
         <Link to="roadmap" smooth={true} offset={-60} onClick={open}>

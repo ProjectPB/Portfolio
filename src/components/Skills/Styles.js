@@ -11,11 +11,14 @@ import {
 
 export const SkillsContainer = styled.div`
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+`;
+
+export const SkillsMain = styled.div`
   padding: 50px 0;
   background: -webkit-linear-gradient(to bottom, #f4d03f, #16a085);
   background: linear-gradient(to bottom, #f4d03f, #16a085);
-  max-width: 1400px;
-  margin: 0 auto;
 
   @media (max-width: 768px) {
     padding: 25px 0;
