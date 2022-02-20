@@ -41,7 +41,7 @@ const Roadmap = () => {
       text: "Land a full time job as a developer",
       progress: "ongoing",
     },
-    { text: "Learn Typescript fundamentals", progress: "ongoing" },
+    { text: "Learn Typescript fundamentals", progress: "done" },
     {
       text: "Maintain and improve Sharefood to scale to many users",
       progress: "ongoing",
