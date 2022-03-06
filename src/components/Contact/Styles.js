@@ -3,7 +3,7 @@ import { color, font_size, font_weight } from "../../utils/styles";
 import Button from "../Button";
 
 export const ContactContainer = styled.div`
-  padding: 50px 0;
+  padding: 75px 0;
   background-color: ${color.backgroundDark};
   max-width: 1400px;
   margin: 0 auto;

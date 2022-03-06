@@ -9,6 +9,7 @@ export const ButtonContainer = styled.button`
   border: ${(props) =>
     props.primary ? "2px solid black" : `2px solid ${color.primary}`};
   cursor: pointer;
+  filter: contrast(1.5);
   border-radius: 5px;
   text-transform: uppercase;
   user-select: none;

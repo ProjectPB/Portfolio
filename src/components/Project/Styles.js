@@ -8,8 +8,13 @@ export const ProjectContainer = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 120px auto;
   flex-direction: ${(props) => props.swap && "row-reverse"};
+  :not(:first-child) {
+    margin: 180px auto;
+  }
+  :first-child {
+    margin: 120px auto 180px;
+  }
 
   @media (max-width: 992px) {
     flex-direction: column;

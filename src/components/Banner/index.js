@@ -76,7 +76,7 @@ const Banner = () => {
             >
               <GitHubIcon alt="Github icon" />
             </LinkRef>
-            <LinkRef href="" target="_blank" rel="noopener noreferrer">
+            <LinkRef target="_blank" rel="noopener noreferrer" disabled>
               <LinkedInIcon alt="Linkedin icon" />
             </LinkRef>
           </IconLinksWrapper>

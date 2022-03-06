@@ -11,7 +11,7 @@ export const SkillsContainer = styled.div`
 `;
 
 export const SkillsMain = styled.div`
-  padding: 50px 0;
+  padding: 75px 0 25px;
   background: -webkit-linear-gradient(to bottom, #f4d03f, #16a085);
   background: linear-gradient(to bottom, #f4d03f, #16a085);
 

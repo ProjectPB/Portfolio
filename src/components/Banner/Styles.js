@@ -147,7 +147,7 @@ export const GoogleIcon = styled(Google)`
 
 export const LinkRef = styled.a`
   padding: 20px;
-  cursor: pointer;
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
 
   &:hover ${GitHubIcon} {
     color: ${color.github};

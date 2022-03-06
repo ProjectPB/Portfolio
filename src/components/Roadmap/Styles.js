@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { color, shadowBackground } from "../../utils/styles";
 
 export const RoadmapContainer = styled.div`
-  padding: 50px 0;
+  padding: 75px 0;
   width: 100%;
   background-color: ${color.secondary};
   max-width: 1400px;
