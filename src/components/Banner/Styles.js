@@ -114,6 +114,13 @@ export const ImageContainer = styled.div`
 export const Image = styled.img`
   height: 300px;
   object-fit: contain;
+  filter: invert(47%) sepia(29%) saturate(3806%) hue-rotate(137deg)
+    brightness(90%) contrast(83%);
+  padding-top: 15px;
+
+  @media (max-width: 600px) {
+    height: 250px;
+  }
 `;
 
 export const IconLinksWrapper = styled.div`

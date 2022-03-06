@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import { useWidth } from "./../../hooks";
 
-import bannerImg from "./../../assets/banner/banner_image.png";
+import devImg from "./../../assets/banner/developer.svg";
 import waveDogImg from "./../../assets/banner/dog_wave.png";
 import Button from "../Button";
 
@@ -66,7 +66,7 @@ const Banner = () => {
         </TextContainer>
 
         <ImageContainer>
-          <Image src={bannerImg} alt="Banner image" />
+          <Image src={devImg} alt="Banner image" />
 
           <IconLinksWrapper>
             <LinkRef
