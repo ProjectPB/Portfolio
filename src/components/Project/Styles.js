@@ -20,15 +20,23 @@ export const ProjectContainer = styled.div`
     flex-direction: column;
     width: 90%;
     margin: 30px auto;
-
     :not(:last-child) {
       border-bottom: 1px solid ${color.backgroundMedium};
+    }
+    :not(:first-child),
+    :first-child {
+      margin: 30px auto;
     }
   }
 
   @media (max-width: 768px) {
-    margin: 15px auto;
-    padding: 15px 0;
+    :not(:first-child) {
+      padding: 30px 0;
+    }
+    :not(:first-child),
+    :first-child {
+      margin: 15px auto;
+    }
   }
 `;
 

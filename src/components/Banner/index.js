@@ -18,7 +18,7 @@ import {
   LinkedInIcon,
   Keyword,
   Text,
-  Img,
+  HelloImg,
   BannerWrapper,
   ScrollIcon,
   LinkRef,
@@ -37,7 +37,7 @@ const Banner = () => {
         <TextContainer>
           <HeadingWrapper>
             <Heading>Hello there!</Heading>
-            <Img src={waveDogImg} alt="Waving dog" />
+            <HelloImg src={waveDogImg} alt="Waving dog" />
           </HeadingWrapper>
 
           <TextWrapper>

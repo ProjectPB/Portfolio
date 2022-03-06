@@ -18,9 +18,12 @@ export const ContactWrapper = styled.div`
   max-width: 1000px;
   margin: 30px auto 15px;
 
+  @media (max-width: 992px) {
+    padding: 0 10px;
+  }
+
   @media (max-width: 768px) {
     flex-direction: column;
-    padding: 0 15px;
     margin: 15px auto 0;
   }
 `;

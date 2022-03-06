@@ -16,7 +16,7 @@ export const SkillsMain = styled.div`
   background: linear-gradient(to bottom, #f4d03f, #16a085);
 
   @media (max-width: 768px) {
-    padding: 25px 0;
+    padding: 25px 10px;
   }
 `;
 

@@ -19,9 +19,10 @@ export const BannerWrapper = styled.div`
   max-height: 900px;
 
   @media (max-width: 768px) {
+    padding: 60px 0 20px;
+    height: auto;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 60px 10px 0;
+    justify-content: center;
   }
 `;
 
@@ -57,7 +58,7 @@ export const Heading = styled.h1`
   }
 `;
 
-export const Img = styled.img`
+export const HelloImg = styled.img`
   height: 48px;
   object-fit: contain;
   margin-left: 20px;
