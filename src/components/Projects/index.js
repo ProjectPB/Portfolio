@@ -21,7 +21,7 @@ const Projects = () => {
     fscImg: sharefoodFscImg,
     mobileImg: sharefoodMobileImg,
     title: "Sharefood",
-    sectionName: "Making a ",
+    sectionName: "Making ",
     keyword: "dinner",
     keywordColor: "#ffc000",
     description:
