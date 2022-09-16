@@ -27,7 +27,7 @@ const Projects = () => {
     description:
       "On Sharefood, users are able to browse recipes, find them using search bar and add them to favorites. Users can also submit their own ideas after signing up.",
     githubLink: "https://github.com/ProjectPB/Sharefood",
-    websiteLink: "https://pb-sharefood.web.app/",
+    websiteLink: "https://sharefood.pl/",
     swapSides: false,
     inDevelopment: true,
   };
