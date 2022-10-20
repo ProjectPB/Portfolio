@@ -13,6 +13,7 @@ import firebase_logo from "./../../assets/skills/firebase.png";
 import htmlcssjs_logo from "./../../assets/skills/htmlcssjs.png";
 import mui_logo from "./../../assets/skills/mui.png";
 import typescript_logo from "./../../assets/skills/typescript.png";
+import nodejs_logo from "./../../assets/skills/nodejs.png";
 
 import {
   SkillsContainer,
@@ -31,6 +32,7 @@ const skillsData = [
   { icon: react_logo, name: "React JS" },
   { icon: redux_logo, name: "Redux" },
   { icon: reduxsaga_logo, name: "Redux-Saga" },
+  { icon: nodejs_logo, name: "Node JS" },
   { icon: firebase_logo, name: "Firebase" },
   {
     icon: styledcomponents_logo,
