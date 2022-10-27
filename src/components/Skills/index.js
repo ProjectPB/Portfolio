@@ -14,6 +14,8 @@ import htmlcssjs_logo from "./../../assets/skills/htmlcssjs.png";
 import mui_logo from "./../../assets/skills/mui.png";
 import typescript_logo from "./../../assets/skills/typescript.png";
 import nodejs_logo from "./../../assets/skills/nodejs.png";
+import tailwind_logo from "./../../assets/skills/tailwind.png";
+import nextjs_logo from "./../../assets/skills/nextjs.png";
 
 import {
   SkillsContainer,
@@ -32,8 +34,10 @@ const skillsData = [
   { icon: react_logo, name: "React JS" },
   { icon: redux_logo, name: "Redux" },
   { icon: reduxsaga_logo, name: "Redux-Saga" },
-  { icon: nodejs_logo, name: "Node JS" },
   { icon: firebase_logo, name: "Firebase" },
+  { icon: nodejs_logo, name: "Node JS" },
+  { icon: nextjs_logo, name: "Next.js" },
+  { icon: tailwind_logo, name: "Tailwind CSS" },
   {
     icon: styledcomponents_logo,
     name: "Styled components",
@@ -83,12 +87,7 @@ const Skills = () => {
         <SliderContainer>
           <SkillsWrapper {...sliderSettings}>
             {skillsData.map(({ icon, name }, id) => (
-              <Skill
-                key={id}
-                className="XD"
-                data-aos="zoom-in"
-                data-aos-delay="200"
-              >
+              <Skill key={id} data-aos="zoom-in" data-aos-delay="200">
                 <SkillIcon src={icon} />
                 <SkillNameContainer>
                   <SkillName>{name}</SkillName>

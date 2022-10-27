@@ -21,11 +21,11 @@ const Projects = () => {
     fscImg: sharefoodFscImg,
     mobileImg: sharefoodMobileImg,
     title: "Sharefood",
-    sectionName: "Making ",
+    sectionName: "Making a ",
     keyword: "dinner",
     keywordColor: "#ffc000",
     description:
-      "On Sharefood, users are able to browse recipes, find them using search bar and add them to favorites. Users can also submit their own ideas after signing up.",
+      "On Sharefood, users are able to browse recipes, find them using a search bar and add them to favorites. Users can also submit their own ideas after signing up.",
     githubLink: "https://github.com/ProjectPB/Sharefood",
     websiteLink: "https://sharefood.pl/",
     swapSides: false,
@@ -55,7 +55,7 @@ const Projects = () => {
     keyword: "new clothes",
     keywordColor: "#1a50a1",
     description:
-      "Wearshop is an E-commerce website which allows users to browse clothes using type filters, add products to cart and submit orders.",
+      "Wearshop is an E-commerce website which allows users to look for clothes using type filters, add products to cart and submit orders. ",
     githubLink: "https://github.com/ProjectPB/Wearshop",
     websiteLink: "https://pb-wearshop.web.app/",
     swapSides: false,

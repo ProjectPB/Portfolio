@@ -26,11 +26,7 @@ const Roadmap = () => {
       progress: "done",
     },
     {
-      text: "Create Concerton project",
-      progress: "done",
-    },
-    {
-      text: "Create Wearshop project",
+      text: "Create Concerton and Wearshop projects",
       progress: "done",
     },
     {
@@ -42,8 +38,9 @@ const Roadmap = () => {
       progress: "ongoing",
     },
     { text: "Learn Typescript fundamentals", progress: "done" },
+    { text: "Improve Next.js and Tailwind CSS skills", progress: "ongoing" },
     {
-      text: "Maintain and improve Sharefood to scale to many users",
+      text: "Develop and develop Sharefood project",
       progress: "ongoing",
     },
   ];

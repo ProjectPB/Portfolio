@@ -90,6 +90,7 @@ export const Skill = styled.div`
 
 export const SkillIcon = styled.img`
   height: 128px;
+  max-width: 128px;
   object-fit: contain;
   margin: 0 auto;
 
@@ -99,6 +100,7 @@ export const SkillIcon = styled.img`
 
   @media (max-width: 768px) {
     height: 72px;
+    max-width: 96px;
   }
 
   @media (max-width: 600px) {
